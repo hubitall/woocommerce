@@ -463,7 +463,7 @@ class WC_Widget_Layered_Nav extends WC_Widget {
 
 			$term_html .= ' ' . apply_filters( 'woocommerce_layered_nav_count', '<span class="count">(' . absint( $count ) . ')</span>', $count, $term );
 
-			echo '<li class="wc-layered-nav-term ' . ( $option_is_set ? 'chosen' : '' ) . '">';
+			echo '<li id="' . ( $term->slug ). '" class="wc-layered-nav-term ' . ( $option_is_set ? 'chosen' : '' ) . '">';
 			echo wp_kses_post( apply_filters( 'woocommerce_layered_nav_term_html', $term_html, $term, $link, $count ) );
 			echo '</li>';
 		}
